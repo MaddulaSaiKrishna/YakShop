@@ -1,0 +1,35 @@
+header{
+    min-height: 50px;
+    padding: 0;
+    background: #14485f;
+    margin-bottom: 30px;
+}
+.header-container img{
+    width: 60px;
+}
+.header-container p {
+    display: inline-block;
+    margin-left: 15px;
+    color: #FFFFFF;
+    font-size: 26px;
+    position: relative;
+    top: 5px;
+}
+ul{
+    margin-bottom: 0;
+}
+ul li{
+    text-decoration: none;
+    list-style-type: none;
+    float: left;
+    display: inline-block;
+    min-width: 150px;
+    text-align: right;
+}
+ul li a {
+    color: #aaa;
+    line-height: 60px;
+}
+.navLinks{
+    display: none;
+}

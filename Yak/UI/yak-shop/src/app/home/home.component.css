@@ -1,0 +1,23 @@
+.placeOrder img, .uploadData img{
+    max-width: 250px;
+    padding-top: 17px;
+}
+.uploadData img{
+    max-width: 213px;
+    /* padding-top: 17px; */
+}
+.loginIcon img {
+    max-width: 250px;
+}
+.registerIcon img {
+    max-width: 195px;
+    padding: 28px 0;
+}
+.logoutIcon{
+    overflow: hidden;
+}
+.logoutIcon img {
+    max-width: 300px;
+    padding: 13px 0px;
+    margin-left: -15px;
+}

@@ -1,0 +1,39 @@
+.yakHide{
+    min-width: 100%;
+    min-height: 100%;
+    background:url("/assets/images/yakHide.jpg") center center no-repeat;
+    background-size: 100% 100%;
+}
+.yakMilk{
+    min-width: 100%;
+    min-height: 100%;
+    background:url("/assets/images/yakMilk.jpg") center center no-repeat;
+    background-size: 100% 100%;
+}
+.panel-body{
+    background-color: #F7F7F7;
+    height: 285px;
+}
+.panel-footer{
+    text-align: center;
+}
+.quantity-btn{
+    background-color: #FFF;
+    color: #000;
+}
+.productInfo span{
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 15px;
+}
+.cartPanelBody{
+    height: auto;
+}
+.cartItemInfo > div{
+    height:40px;
+}
+.cartItemInfo > div > span{
+    display:inline-block;
+    width: 33%;
+    text-align: center;
+}

@@ -1,0 +1,9 @@
+.stockStatus .panel-body{
+    height: 50px;
+    background-color: #989c9e;
+}
+.stockStatus .panel-body p{
+    display:inline-block;
+    width: 50%;
+    font-weight: bold;
+}

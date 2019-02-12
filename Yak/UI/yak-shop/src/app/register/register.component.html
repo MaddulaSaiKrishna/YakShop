@@ -1,0 +1,28 @@
+<h1>Register</h1>
+<form name = "registerForm" (ngSubmit) = "onLogin(f)" #f = "ngForm">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Name" ngModel name = "name" required #nameField = "ngModel">
+    <p class = "errorMsg" *ngIf = "nameField.touched && !nameField.valid">Please enter name.</p>
+  </div>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" placeholder="Email" ngModel name = "email" required email #emailField = "ngModel">
+    <p class = "errorMsg" *ngIf = "emailField.touched && !emailField.valid">Please enter valid email address.</p>
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password</label>
+    <input type="password" class="form-control" id="pwd" placeholder="Password" ngModel name = "password" required #pwdField = "ngModel">
+    <p class = "errorMsg" *ngIf = "pwdField.touched && !pwdField.valid">Please enter valid password.</p>
+  </div>
+
+  <div class="form-group">
+    <label for="role">Role</label>
+    <select class="form-control" id = "role" ngModel name = "role" required #roleField = "ngModel">
+      <option value = "admin">Admin</option>
+      <option value = "user" selected>User</option>
+    </select>
+    <p class="errorMsg" *ngIf="roleField.touched && !roleField.valid">Please enter role.</p>
+  </div>
+  <button type="submit" [disabled] = "!f.valid" class="btn btn-default">Register</button>
+</form>

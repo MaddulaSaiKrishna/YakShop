@@ -1,0 +1,46 @@
+<h3>Herd Details</h3>
+<form class="form-inline row" [formGroup]="herdDetailsForm" (ngSubmit) = "onSubmit()" *ngIf = "!existingHerd">
+    <div formArrayName = "herdDetails">
+      <div class = "herdRow" *ngFor = "let group of herdDetailsForm.get('herdDetails').controls; let i = index">
+          <div [formGroupName] = "i">
+            <div class="col-md-3 form-group">
+              <label for="exampleInputName2">Name: </label>
+              <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter name" formControlName = "name">
+            </div>
+            <div class="col-md-3 form-group">
+              <label for="exampleInputAge2">Age: </label>
+              <input type="number" class="form-control" id="exampleInputAge2" placeholder="Enter age" formControlName = "age">
+            </div>
+            <div class="col-md-3 form-group">
+              <label for="exampleInputSex2">Sex: </label>
+              <select class="form-control" id = "exampleInputSex2" formControlName = "sex">
+                  <option value = "male">Male</option>
+                  <option value = "female">Female</option>
+                </select>
+            </div>
+            <div class="col-md-3 form-group">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary" (click) = "onAddRow()">+</button>
+                  <button type="button" class="btn btn-primary" (click) = "onDeleteRow(i)" [disabled] = "i == 0">-</button>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <button type = "submit" class = "btn btn-primary" [disabled] = "!herdDetailsForm.valid">Upload Herd</button>
+  </form>
+  <div class = "showHerdDetails" *ngIf = "existingHerd">
+      <table class="table table-bordered">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Age Last Shaved</th>
+        </tr>
+        <tr *ngFor = "let row of existingHerdInfo;">
+            <th>{{ row["name"] }}</th>
+            <th>{{ row["age"] }}</th>
+            <th>{{ row["age-last-shaved"] }}</th>
+          </tr>
+      </table>
+      <button class = "btn btn-primary" (click) = "uploadNewHerd()">Upload New Herd</button>
+  </div>

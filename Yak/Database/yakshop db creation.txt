@@ -1,0 +1,15 @@
+In Mongodb terminal Enter the following commands to create database:
+
+Step 1:
+use yakstore
+
+Step 2:
+db.createCollection("loginCollection");
+db.loginCollection.ensureIndex({'email': 1},{unique:true});
+
+Step 3:
+db.createCollection("herdCollection");
+db.herdCollection.ensureIndex({'name': 1},{unique:true});
+
+Step 4:
+db.createCollection("orderCollection");

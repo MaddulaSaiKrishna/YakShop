@@ -1,0 +1,106 @@
+<div class = "placeorder row">
+  <div class = "col-md-12">
+    <app-status></app-status>
+  </div>
+  <div class = "col-md-4">
+    <div class = "panel panel-default">
+      <div class="panel-body">
+        <div class = "yakMilk"></div>
+      </div>
+      <div class="panel-footer">
+          <div class = "row">
+            <div class = "col-md-12 productInfo">
+              <span>Yak Milk</span>
+              <span class = "price bold">Rs. 100/litre</span>
+            </div>
+            <div class = "col-md-12 center">
+              <div class="btn-group center">
+                <button type="button" class="btn btn-primary" (click) = "decrement('yakMilk')">-</button>
+                <button type="button" class="btn btn-primary quantity-btn">{{ yakMilk }}</button>
+                <button type="button" class="btn btn-primary" (click) = "increment('yakMilk')">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class = "col-md-4">
+    <div class = "panel panel-default">
+      <div class="panel-body">
+        <div class = "yakHide">
+        </div>
+      </div>
+      <div class="panel-footer">
+        <div class = "row">
+            <div class = "col-md-12 productInfo">
+                <span>Yak Skin</span>
+                <span class = "price bold">Rs. 200/-</span>
+              </div>
+          <div class = "col-md-12 center">
+            <div class="btn-group center">
+              <button type="button" class="btn btn-primary" (click) = "decrement('yakHide')">-</button>
+              <button type="button" class="btn btn-primary quantity-btn">{{ yakHide }}</button>
+              <button type="button" class="btn btn-primary" (click) = "increment('yakHide')">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class = "col-md-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Your Cart</h3>
+      </div>
+      <div class="panel-body cartPanelBody">
+        <div class = "row cartItemInfo">
+            <div class = "col-md-12 bold">
+              <span>
+                  Product
+              </span>
+              <span>
+                  Quantity
+              </span>
+              <span>
+                  Price
+              </span>
+            </div>
+            <div class = "col-md-12">
+            <span>
+                Yak Milk
+            </span>
+            <span>
+                {{ yakMilk }}
+            </span>
+            <span>
+                {{ yakMilk * yakMilkCost }}
+            </span>
+          </div>
+          <div class = "col-md-12">
+            <span>
+                Yak Hide
+            </span>
+            <span>
+                {{ yakHide }}
+            </span>
+            <span>
+                {{ yakHide * yakHideCost }}
+            </span>
+          </div>
+          <div class = "col-md-12">
+            <span>
+                Total
+            </span>
+            <span>
+                {{ yakMilk + yakHide }}
+            </span>
+            <span>
+                {{ (yakMilk * yakMilkCost) + (yakHide * yakHideCost) }}
+            </span>
+            </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" (click) = "order()" [disabled] = "yakMilk + yakHide == 0">Place order</button>
+  </div>
+</div>

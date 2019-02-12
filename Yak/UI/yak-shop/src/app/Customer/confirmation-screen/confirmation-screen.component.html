@@ -1,0 +1,28 @@
+<div class = "confirmation">
+  <h2 class = "center" *ngIf = "confirmMsg.indexOf('unavailability') == -1">Thank you for your order!</h2>
+  <p class = "center bold">
+    {{ confirmMsg }}
+  </p>
+  <div *ngIf = "confirmMsg.indexOf('unavailability') == -1">
+    <p class="center bold">
+      Your Oder No. #{{ orderDetails['_id'] }}
+    </p>
+    <p>
+      Hey User, We're getting your order ready to be shipped. Your order details are shown below.
+    </p>
+    <table class="table table-bordered">
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+      </tr>
+      <tr *ngIf="orderDetails['order']['milk'] > 0">
+        <td>Yak Milk</td>
+        <td>{{ orderDetails['order']['milk'] }} Litre(s)</td>
+      </tr>
+      <tr *ngIf="orderDetails['order']['skins'] > 0">
+        <td>Total</td>
+        <td>{{ orderDetails['order']['skins'] }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

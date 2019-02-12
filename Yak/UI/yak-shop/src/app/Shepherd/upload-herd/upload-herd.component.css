@@ -1,0 +1,17 @@
+h3{
+    text-align: center;
+    margin: 0 auto 30px auto;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.form-group label{
+    margin-right:15px;
+}
+.form-inline select.form-control{
+    width: 80%;
+}
+button[type = submit] {
+    margin-left: 15px;
+}
