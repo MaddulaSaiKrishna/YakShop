@@ -4,7 +4,7 @@ Online shop for Yak shepherd: Startup Guide.
 Database:
 
 1. Please install mongoDB(2.6 or higher) and create data/db folder.
-2. Navigate to "/.bin" folder and open "mongod.exe" to start mongoDB connections.
+2. Navigate to "bin" folder and open "mongod.exe" to start mongoDB connections.
 3. In the same path, open "mongo.exe". This will open a terminal for mongoDB commands.
 4. Enter all commands listed in "Yak/Database/yakshop db creation.txt" file
 
